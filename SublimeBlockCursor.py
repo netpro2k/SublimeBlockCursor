@@ -26,6 +26,13 @@ class SublimeBlockCursor(sublime_plugin.EventListener):
 
     def on_deactivated(self, view):
         view.erase_regions('SublimeBlockCursorListener')
+        view.settings().clear_on_change('command_mode')
+        self.current_view = None
 
     def on_activated(self, view):
-        self.show_block_cursor(view)
+        self.on_selection_modified(view)
+        view.settings().add_on_change('command_mode', self.on_command_mode_change)
+        self.current_view = view
+
+    def on_command_mode_change(self):
+        self.on_selection_modified(self.current_view)
