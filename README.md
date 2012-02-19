@@ -8,7 +8,7 @@ When using "Vintage Mode" in [Sublime Text 2][sublime], it can become very diffi
 
 ### With Package Control ###
 
-If you have the [Package Control][package_control] installed, you can install Sublime Tweet from inside Sublime Text itself. Open the Command Palette and select "Package Control: Install Package", then search for SublimeBlockCursor and you’re done!
+If you have the [Package Control][package_control] installed, you can install SublimeBlockCursor from inside Sublime Text itself. Open the Command Palette and select "Package Control: Install Package", then search for SublimeBlockCursor and you’re done!
 
 ### Without Package Control ###
 
